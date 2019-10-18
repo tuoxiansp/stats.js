@@ -38,7 +38,7 @@ var Stats = function() {
     prevTime = beginTime,
     frames = 0;
   var swQueue = []; //[timestamp, swTime]
-  var swStep = 3 * 1000;
+  var swStep = 1000;
 
   var fpsPanel = addPanel(new Stats.Panel("FPS", "#0ff", "#002"));
   var swPanel = addPanel(new Stats.Panel("SW", "rgb(240, 185, 11)", "#020"));
@@ -71,7 +71,7 @@ var Stats = function() {
 
       msPanel.update(frameTime, 200);
 
-      var st = (frameTime - 50) * (frameTime - 50);
+      var st = (frameTime - 30) * (frameTime - 30);
 
       if (st > 0) {
         swQueue.unshift([time, st]);
