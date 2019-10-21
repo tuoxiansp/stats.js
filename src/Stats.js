@@ -40,9 +40,9 @@ var Stats = function() {
   var swQueue = []; //[timestamp, swTime]
   var swStep = 1000;
 
-  var fpsPanel = addPanel(new Stats.Panel("FPS", "#0ff", "#002"));
   var swPanel = addPanel(new Stats.Panel("SW", "rgb(240, 185, 11)", "#020"));
   var msPanel = addPanel(new Stats.Panel("MS", "#0f0", "#020"));
+  var fpsPanel = addPanel(new Stats.Panel("FPS", "#0ff", "#002"));
 
   if (self.performance && self.performance.memory) {
     var memPanel = addPanel(new Stats.Panel("MB", "#f08", "#201"));
